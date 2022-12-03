@@ -29,6 +29,8 @@ public class EntryPoint {
     switch (day) {
       case 1:
         return new Day1(dayArgs);
+      case 2:
+        return new Day2(dayArgs);
       default:
         log.error("Unknown day {}", day);
         throw new IllegalArgumentException("Unknown day provided");
