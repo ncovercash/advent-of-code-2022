@@ -52,4 +52,12 @@ public class InputUtils {
 
     return collection.stream().filter(cl -> !cl.isEmpty()).toList();
   }
+
+  public static List<Character> stringToCharacterList(String in) {
+    List<Character> result = new ArrayList<>();
+    for (char c : in.toCharArray()) {
+      result.add(c);
+    }
+    return result;
+  }
 }
