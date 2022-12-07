@@ -1,12 +1,9 @@
 package dev.ncovercash;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.Stack;
-import java.util.TreeSet;
 import java.util.stream.Collectors;
 import lombok.extern.log4j.Log4j2;
 
