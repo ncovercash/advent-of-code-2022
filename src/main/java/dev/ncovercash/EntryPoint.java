@@ -49,6 +49,12 @@ public class EntryPoint {
         return new Day10(dayArgs);
       case 11:
         return new Day11(dayArgs);
+      case 12:
+        return new Day12(dayArgs);
+      case 13:
+        return new Day13(dayArgs);
+      case 14:
+        return new Day14(dayArgs);
       default:
         log.error("Unknown day {}", day);
         throw new IllegalArgumentException("Unknown day provided");
