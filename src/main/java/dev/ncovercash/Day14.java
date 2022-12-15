@@ -1,15 +1,9 @@
 package dev.ncovercash;
 
-import java.io.FileNotFoundException;
-import java.io.StringWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.stream.Collectors;
-import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
@@ -40,9 +34,6 @@ public class Day14 extends AbstractDay {
   protected void completeChallenge() {
     List<String> allInput = InputUtils.getLines("14.txt");
 
-    int minX = Integer.MAX_VALUE;
-    int maxX = Integer.MIN_VALUE;
-    int minY = Integer.MAX_VALUE;
     int maxY = Integer.MIN_VALUE;
 
     Map<Integer, Map<Integer, Boolean>> cave = new HashMap<>();
@@ -65,15 +56,11 @@ public class Day14 extends AbstractDay {
             x <= Math.max(initialX, nextX);
             x++
           ) {
-            minX = Math.min(minX, x);
-            maxX = Math.max(maxX, x);
-
             for (
               int y = Math.min(initialY, nextY);
               y <= Math.max(initialY, nextY);
               y++
             ) {
-              minY = Math.min(minY, y);
               maxY = Math.max(maxY, y);
 
               markCavePoint(cave, x, y);
