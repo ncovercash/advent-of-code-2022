@@ -1,6 +1,5 @@
 package dev.ncovercash;
 
-import java.io.FileNotFoundException;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Arrays;

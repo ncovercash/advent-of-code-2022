@@ -183,7 +183,7 @@ public class Day17 extends AbstractDay {
   }
 
   protected void completeChallenge() {
-    List<String> allInput = InputUtils.getLines("17.txt");
+    List<String> allInput = InputUtils.getLines("17-test.txt");
 
     List<Direction> jets = allInput
       .get(0)
@@ -261,7 +261,7 @@ public class Day17 extends AbstractDay {
       }
 
       incorporate(rock, rows);
-      if (cycle != null) {
+      if (cycle == null) {
         cycle = checkCycle(rows, cycleCache, jetI, i, shrunkRows + rows.size());
       }
       shrunkRows += shrink(rows);
