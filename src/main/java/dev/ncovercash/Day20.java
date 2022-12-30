@@ -73,21 +73,21 @@ public class Day20 extends AbstractDay {
       .map(Node::new)
       .toList();
 
-    for (int i = 0; i < nodes.size(); i++) {
-      nodes.get(i).next = nodes.get((i + 1) % nodes.size());
-      nodes.get((i + 1) % nodes.size()).prev = nodes.get(i);
-    }
-
     Node zeroNode = null;
 
     for (int i = 0; i < nodes.size(); i++) {
+      nodes.get(i).next = nodes.get((i + 1) % nodes.size());
+      nodes.get((i + 1) % nodes.size()).prev = nodes.get(i);
       if (nodes.get(i).val == 0) {
         zeroNode = nodes.get(i);
       }
+    }
+
+    for (int i = 0; i < nodes.size(); i++) {
       nodes.get(i).mix(nodes.size());
     }
 
-    int sum = 0;
+    long sum = 0;
 
     for (int n = 0; n < 3; n++) {
       for (int i = 0; i < 1000; i++) {
@@ -121,8 +121,7 @@ public class Day20 extends AbstractDay {
       for (int i = 0; i < nodes.size(); i++) {
         nodes.get(i).mix(nodes.size());
       }
-
-      printList(zeroNode);
+      // printList(zeroNode);
     }
 
     sum = 0;
